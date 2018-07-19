@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -36,10 +38,20 @@ dependencies {
     api 'com.squareup.okhttp3:logging-interceptor:3.10.0'
     //图片加载
     api 'com.github.bumptech.glide:glide:4.7.1'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    kapt 'com.github.bumptech.glide:compiler:4.7.1'
     //UI
     implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
     implementation 'com.google.android.material:material:1.0.0-beta01'
+    //paging
+    implementation "androidx.paging:paging-runtime:2.0.0-beta01"
+    //ViewModel和LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:2.0.0-beta01"
+    //room
+    implementation "androidx.room:room-runtime:2.0.0-beta01"
+    kapt "androidx.room:room-compiler:2.0.0-beta01"
+    //glide
+    compile 'com.github.bumptech.glide:glide:4.7.1'
+    kapt 'com.github.bumptech.glide:compiler:4.7.1'
 }

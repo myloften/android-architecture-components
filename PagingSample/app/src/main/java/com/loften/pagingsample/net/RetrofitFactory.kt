@@ -1,5 +1,6 @@
 package com.loften.pagingsample.net
 
+import android.util.Log
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -52,7 +53,9 @@ class RetrofitFactory{
     }
 
     private fun initLogInterceptor(): Interceptor{
-        val httpLoggingInterceptor = HttpLoggingInterceptor()
+        val httpLoggingInterceptor = HttpLoggingInterceptor(HttpLoggingInterceptor.Logger{
+            Log.e("API", it)
+        })
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         return httpLoggingInterceptor
     }

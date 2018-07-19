@@ -1,7 +1,7 @@
 package com.loften.pagingsample
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.loften.pagingsample.repository.GankPostRepository
 import com.loften.pagingsample.ui.DatasActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,8 +24,5 @@ class MainActivity : AppCompatActivity() {
             DatasActivity.startActivity(this, GankPostRepository.Type.IN_MEMORY_BY_ITEM)
         }
 
-        bt3.setOnClickListener {
-            DatasActivity.startActivity(this, GankPostRepository.Type.IN_MEMORY_BY_PAGE)
-        }
     }
 }

@@ -1,5 +1,10 @@
 package com.loften.pagingsample.bean
 
+import androidx.room.Entity
+import androidx.room.Index
+import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
+
 
 data class SubCategoryResult(
     val _id: String,
@@ -10,7 +15,7 @@ data class SubCategoryResult(
     val deleted: Boolean,
     val published_at: String,
     val raw: String,
-    val site: Site,
+    val site: Site?,
     val title: String,
     val uid: String,
     val url: String

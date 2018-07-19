@@ -12,8 +12,8 @@ interface GankApi {
     @GET("api/xiandu/category/wow")
     fun getCategory(): Call<BaseResp<List<CategoryResult>>>
 
-    @GET("api/xiandu/data/id/{type}/count/10/page/{page}")
-    fun getSubCategoryDatas(@Path("type") type: String, @Path("page") page:Int): Call<BaseResp<List<SubCategoryResult>>>
+    @GET("api/xiandu/data/id/{type}/count/{count}/page/{page}")
+    fun getSubCategoryDatas(@Path("type") type: String, @Path("count") count:Int, @Path("page") page:Int): Call<BaseResp<List<SubCategoryResult>>>
 
 
 }
